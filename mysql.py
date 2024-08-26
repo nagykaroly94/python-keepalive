@@ -43,6 +43,7 @@ def main():
     config.read(DECRYPTED_CONFIG_FILE)
 
     # Adatbázis kapcsolatok paraméterei. A program felvan készítve arra, hogy akármennyi adatbázist tudjon kezelni. A lista bármeddig bővíthető.
+    # Fontos megjegyezni, hogy a config.ini fájlban benne kell lennie minden szükséges adatnak.
     connections = [
         {"host": "hosztnev1", "user": config['database1']['user'], "password": config['database1']['password'], "database": "adatbazis1"},
         {"host": "hosztnev2", "user": config['database2']['user'], "password": config['database2']['password'], "database": "adatbazis2"},

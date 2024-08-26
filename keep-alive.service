@@ -1,10 +1,13 @@
 [Unit]
 Description=Python Keep-Alive Service
+After=network.target
 [Service]
-ExecStart=/usr/bin/python /usr/local/lib/keep-alive/mysql.py
+ExecStart=/usr/bin/python3 /usr/local/lib/keep-alive/mysql.py
 Environment=PYTHONUNBUFFERED=1
 Restart=on-failure
 Type=notify
-User=python_demo_service
+User=root
+Group=root
+
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
